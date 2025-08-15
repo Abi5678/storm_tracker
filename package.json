@@ -1,0 +1,93 @@
+{
+  "name": "storm-tracker-desktop",
+  "version": "1.0.0",
+  "description": "Advanced Storm Tracker Desktop Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dist": "electron-builder --publish=never",
+    "pack": "electron-builder --dir",
+    "dmg": "electron-builder --mac --dmg",
+    "win": "electron-builder --win",
+    "win-portable": "electron-builder --win portable",
+    "win-installer": "electron-builder --win nsis",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": ["storm", "tracker", "desktop", "electron"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "firebase": "^10.7.1"
+  },
+  "build": {
+    "appId": "com.stormtracker.desktop",
+    "productName": "Advanced Storm Tracker",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "node_modules/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "assets/icon.icns",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["arm64", "x64"]
+        }
+      ]
+    },
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Advanced Storm Tracker"
+    },
+    "dmg": {
+      "title": "Advanced Storm Tracker",
+      "icon": "assets/icon.icns",
+      "window": {
+        "width": 540,
+        "height": 380
+      },
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "icon": "assets/icon.png"
+    }
+  }
+} 
