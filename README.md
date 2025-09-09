@@ -214,6 +214,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Advanced analytics
 - [ ] Export to multiple formats
 
+## 📚 UX Portfolio
+
+For a comprehensive look at the user experience design process, research methodology, and project case study, visit our complete UX portfolio:
+
+**[📊 Complete UX Portfolio](PORTFOLIO_INDEX.md)**
+
+The portfolio includes:
+- **User Research & Testing** - Comprehensive research methodology and findings
+- **Design Mockups & Wireframes** - Visual specifications and component library
+- **Case Study** - Detailed project analysis and business impact
+- **UX Portfolio** - Complete design process documentation
+
 ---
 
 **Made with ❤️ for storm management professionals**
